@@ -22,6 +22,10 @@ class TestCase(unittest.TestCase):
     def test5(self):
         """Verify that the password contains at least 1 digit"""
         self.assertFalse(check_pwd('abcdABCD'))
+        
+    def test6(self):
+        """Verify that the password contains one of the required special characters"""
+        self.assertFalse(check_pwd('abcABC12'))
 
 if __name__ == '__main__':
     unittest.main()
