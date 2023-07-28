@@ -15,4 +15,9 @@ def check_pwd(pwd):
     if upper_case is None:
         return False
     
+    # check that there is at least one digit
+    digit = re.search('[0-9]', pwd)
+    if digit is None:
+        return False
+    
     return True
