@@ -14,6 +14,10 @@ class TestCase(unittest.TestCase):
     def test3(self):
         """Verify that password contains at least 1 lower case letter"""
         self.assertFalse(check_pwd('12345678'))
+        
+    def test4(self):
+        """Verify that the password contains at least 1 upper case letter"""
+        self.assertFalse(check_pwd('abcdabcd'))
 
 if __name__ == '__main__':
     unittest.main()
