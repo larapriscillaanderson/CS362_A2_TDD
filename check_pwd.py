@@ -10,4 +10,9 @@ def check_pwd(pwd):
     if lower_case is None:
         return False
     
+    # check for a uppercase letter
+    upper_case = re.search('[A-Z]', pwd)
+    if upper_case is None:
+        return False
+    
     return True
